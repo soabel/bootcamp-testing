@@ -1,0 +1,8 @@
+com/bootcamp/testing/CalculadoraTest.java
+ com.bootcamp.testing.CalculadoraTest
+com/bootcamp/testing/domain/services/PersonDomainServiceTest.java
+ com.bootcamp.testing.domain.services.PersonDomainServiceTest
+com/bootcamp/testing/TestingApplicationTests.java
+ com.bootcamp.testing.TestingApplicationTests
+com/bootcamp/testing/web/controllers/PersonControllerTest.java
+ com.bootcamp.testing.web.controllers.PersonControllerTest
