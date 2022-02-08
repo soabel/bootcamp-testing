@@ -3,8 +3,7 @@ package com.bootcamp.testing;
 public class Calculadora {
 
     // Implementar un metodo para verificar si un número es primo.
-    // Verificar si un número es capicua.  1881
-
+    // Implementar un metodo para Verificar si un número es capicua. Ejemplo:  1881
 
     Integer sumar(Integer a, Integer b){
         return a + b;
