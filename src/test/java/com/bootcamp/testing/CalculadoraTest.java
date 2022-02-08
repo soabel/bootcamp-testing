@@ -1,9 +1,17 @@
 package com.bootcamp.testing;
 
 import org.junit.jupiter.api.*;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+// TEST  - Patron AAA
+// A    : Arrange (Preparar)
+// A    : Act (Actuar)
+// A    : Assert (Afirmar)
+
+@SpringBootTest
 class CalculadoraTest {
 
     private static Calculadora calculadora;
@@ -20,9 +28,14 @@ class CalculadoraTest {
 
     @Test
     void sumar_OK() {
+
+        // A    : Arrange (Preparar)
         var valorEsperado = 9;
+
+        // A    : Act (Actuar)
         var valorReal = calculadora.sumar(5,4);
 
+        // A    : Assert (Afirmar)
         assertEquals(valorEsperado,valorReal);
 
     }
