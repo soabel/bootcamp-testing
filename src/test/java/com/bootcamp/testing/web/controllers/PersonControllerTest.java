@@ -33,8 +33,9 @@ class PersonControllerTest {
 
     @Test
     void checkDigitDni() throws Exception {
-        Integer valorEsperado = 0;
 
+        // A: Arrange
+        Integer valorEsperado = 0;
         Integer valorMock = 2;
 
         when(this.personDomainService.checkDigitDni("43012421")).thenReturn(valorMock);
@@ -43,9 +44,12 @@ class PersonControllerTest {
                 .andExpect(status().isOk())
                 .andReturn();
 
+        // A: Act
+
         String content = result.getResponse().getContentAsString();
         Integer valorReal = this.objectMapper.readValue(content, Integer.class );
 
+        // A: Assert
         assertEquals(valorEsperado, valorReal);
 
 

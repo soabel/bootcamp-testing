@@ -1,6 +1,8 @@
 package com.bootcamp.testing.domain.services.impl;
 
+import com.bootcamp.testing.domain.repository.PersonRepository;
 import com.bootcamp.testing.domain.services.PersonDomainService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,12 +13,17 @@ import java.util.stream.Collectors;
 @Service
 public class PersonDomainServiceImpl implements PersonDomainService {
 
+    @Autowired
+    private PersonRepository personRepository;
+
     public Integer checkDigitDni(String s) {
         var auxiliarBase = 11;
         var auxiliarSecundario = 1;
-        var serieMultiplicador= List.of(3,2,7,6,5,4,3,2);
-        var serieDePosicion= List.of(6,7,8,9,0,1,1,2,3,4,5);
+//        var serieMultiplicador= List.of(3,2,7,6,5,4,3,2);
+        var serieMultiplicador= this.personRepository.getSerieMutiplicador();
+//        var serieDePosicion= List.of(6,7,8,9,0,1,1,2,3,4,5);
 
+        var serieDePosicion=this.personRepository.getSerie();
          var array = s.split("");
          
          var enteros = Arrays

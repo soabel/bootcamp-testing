@@ -18,6 +18,8 @@ public class PersonController {
     Integer checkDigitDni(@PathVariable String dni){
         var digitoFinal =  this.personDomainService.checkDigitDni(dni);
 
+//        return digitoFinal;
+
         if(digitoFinal > 3){
             return 1;
         }else{
