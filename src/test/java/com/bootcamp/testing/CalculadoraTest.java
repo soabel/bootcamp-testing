@@ -14,10 +14,11 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CalculadoraTest {
 
-    private static Calculadora calculadora;
+    private static Calculadora calculadora ;
 
     @BeforeAll
     static void beforeAll(){
+        System.out.println("beforeAll" );
         calculadora = new Calculadora();
     }
 
@@ -37,6 +38,7 @@ class CalculadoraTest {
 
         // A    : Assert (Afirmar)
         assertEquals(valorEsperado,valorReal);
+
 
     }
 
